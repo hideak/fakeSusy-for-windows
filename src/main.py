@@ -37,11 +37,11 @@ class MainWindow(QMainWindow):
         arquivos = QAction(QIcon("..\\icons\\folder.svg"), 'Arquivos', self)
         arquivos.setStatusTip('Exibe uma pasta com os seus arquivos e códigos fonte.')
         arquivos.setIconText('Meus\nArquivos')
-        
+
         servidor = QAction(QIcon("..\\icons\\server.svg"), 'Servidor', self)
         servidor.setStatusTip('Configura o servidor usado no Susy.')
         servidor.setIconText('Servidor\nSusy')
-        
+
         compilar = QAction(QIcon("..\\icons\\box.svg"), 'Compilar Código', self)
         compilar.setStatusTip('Realiza a compilação e teste do seu código em C.')
         compilar.setIconText('Compilar\ne Testar!')
@@ -72,7 +72,7 @@ class MainWindow(QMainWindow):
         menubar.addMenu('&Laboratórios')
         menubar.addMenu('&Configurações')
         unichampsMenu = menubar.addMenu('&Aqui é Unichamps!')
-        
+
         # Barra de Status
         self.statusBar()
 
@@ -83,7 +83,7 @@ class MainWindow(QMainWindow):
         self.toolbar.addAction(flags)
         self.toolbar.addAction(tempo)
         self.toolbar.addAction(arquivos)
-        
+
         self.toolbar.addAction(compilar)
         self.toolbar.addAction(baixar)
         self.toolbar.addSeparator()
@@ -93,7 +93,7 @@ class MainWindow(QMainWindow):
         self.toolbar.addAction(sair)
         self.toolbar.setToolButtonStyle(3)
         self.toolbar.setMovable(False)
-        
+
         # Definindo Geometria da Janela
         self.setWindowTitle('FakeSusy for Windows v0.11')
         self.setWindowIcon(QIcon('..\icons\codeIcon.png'))
@@ -101,7 +101,7 @@ class MainWindow(QMainWindow):
 
     def setWelcomeWidget(self):
         welcome = QTextEdit()
-        fchangelog = open('..\\changelog.txt', encoding='utf-8', 'r')
+        fchangelog = open('..\\changelog.txt', encoding='utf-8', mode='r')
         with fchangelog:
             changelog = fchangelog.read()
             welcome.setText(changelog)
@@ -112,7 +112,7 @@ class MainWindow(QMainWindow):
     def showWindow(self):
         newWindow = closeWindow()
         newWindow.exec_()
-    
+
 # Exibe a Janela
 if __name__ == '__main__':
     app = QApplication(sys.argv)
