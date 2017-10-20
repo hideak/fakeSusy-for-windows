@@ -1,0 +1,18 @@
+Bem Vindo ao FakeSusy for Windows!
+Estamos atualmente na versão v0.05.
+
+Este programa tem a finalidade de auxiliar os alunos de programação da Unicamp a conseguirem
+testar seus labs de maneira rápida, sem precisar da submissão web do Susy.
+
+Changelog:
+
+v0.05:
+Início da implementação dos métodos de GET e PUSH
+
+v0.04:
+Correção de bugs nos rótulos
+
+v0.03:
+Protótipo da Barra de Menus
+Protótipo da Barra de Status e Ferramentas
+Implementação das Ações
